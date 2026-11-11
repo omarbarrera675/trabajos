@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetodosJS</title>
+</head>
+<body>
+    <h1>innerHTML</h1>
+
+    <h3>Ejemplo1: cambiar texto</h3>
+    <p id="mensaje">Hola Mundo</p>
+    <script>
+        document.getElementById("mensaje").innerHTML="BIENVENIDO!";
+    </script>
+
+    <h3>Ejemplo 2:agregar una imagen</h3>
+    <div id="imagen"></div>
+    <script>
+        document.getElementById("imagen").innerHTML=
+        '<img src ="gatof.webp" alt="Logo">';
+    </script>
+
+    <h1>getElementById</h1>
+
+    <h3>Ejemplo 1:mostrar un mensaje</h3>
+    <p id="aviso">Mensaje inicial</p>
+    <script>
+        var elemento=document.getElementById("aviso");
+        elemento.innerHTML="Hola estudiante";
+    </script>
+
+    <h3>Ejemplo 2:cambiar el color  de un boton</h3>
+    <button id="btn">Haz clic</button>
+    <script>
+        document.getElementById("btn").style.color="blue";
+    </script>
+
+    <h1>querySelector</h1>
+    <h3>Ejemplo 1:obtener un elemento por clase</h3>
+    <p class="destacado">Texto importante</p>
+    <script>
+        document.querySelector(".destacado").style.color="red";
+    </script>
+
+    <h3>Ejemplo 2:obtener un boton y deshabilitarlo</h3>
+    <button class="btn">Enviar</button>
+    <script>
+        document.querySelector(".btn").disable=true;
+    </script>
+</body>
+</html>

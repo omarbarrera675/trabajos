@@ -1,0 +1,59 @@
+:root {
+    --bg: #f2efe9;
+    --ink: #1d2a33;
+    --muted: #5b6770;
+    --btn: #1f5c7a;
+    --btn-hover: #14425a;
+    --btn-text: #ffffff;
+    --focus: #e0a526;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141b20;
+      --ink: #eef2f4;
+      --muted: #9aa7b0;
+      --btn: #5fb0d3;
+      --btn-hover: #8cc8e4;
+      --btn-text: #0e1a21;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.25rem;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+  }
+  h1 { font-size: clamp(2rem, 6vw, 3.25rem); margin: 0 0 .5rem; text-align: center; }
+  p.sub { margin: 0 0 2.5rem; color: var(--muted); text-align: center; }
+  .botones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    width: 100%;
+    max-width: 760px;
+  }
+  .botones a {
+    display: block;
+    padding: 1.25rem 1rem;
+    background: var(--btn);
+    color: var(--btn-text);
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 12px;
+    transition: transform .15s, background .15s;
+  }
+  .botones a:hover { background: var(--btn-hover); transform: translateY(-3px); }
+  .botones a:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) {
+    .botones a { transition: none; }
+    .botones a:hover { transform: none; }
+  }
